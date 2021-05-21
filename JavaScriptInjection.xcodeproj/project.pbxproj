@@ -13,6 +13,7 @@
 		DA23D36D2658696500176A16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA23D36B2658696500176A16 /* Main.storyboard */; };
 		DA23D36F2658696600176A16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA23D36E2658696600176A16 /* Assets.xcassets */; };
 		DA23D3722658696600176A16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA23D3702658696600176A16 /* LaunchScreen.storyboard */; };
+		DA23D37A26586A0A00176A16 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DA23D37926586A0900176A16 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DA23D36E2658696600176A16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA23D3712658696600176A16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA23D3732658696600176A16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA23D37926586A0900176A16 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		DA23D3592658696500176A16 = {
 			isa = PBXGroup;
 			children = (
+				DA23D37926586A0900176A16 /* README.md */,
 				DA23D3642658696500176A16 /* JavaScriptInjection */,
 				DA23D3632658696500176A16 /* Products */,
 			);
@@ -126,6 +129,7 @@
 			files = (
 				DA23D3722658696600176A16 /* LaunchScreen.storyboard in Resources */,
 				DA23D36F2658696600176A16 /* Assets.xcassets in Resources */,
+				DA23D37A26586A0A00176A16 /* README.md in Resources */,
 				DA23D36D2658696500176A16 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
