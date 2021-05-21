@@ -14,7 +14,35 @@
 		DA23D36F2658696600176A16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA23D36E2658696600176A16 /* Assets.xcassets */; };
 		DA23D3722658696600176A16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA23D3702658696600176A16 /* LaunchScreen.storyboard */; };
 		DA23D37A26586A0A00176A16 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DA23D37926586A0900176A16 /* README.md */; };
+		DA23D38226586E2800176A16 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA23D38126586E2800176A16 /* Media.xcassets */; };
+		DA23D38426586E2800176A16 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA23D38326586E2800176A16 /* ActionViewController.swift */; };
+		DA23D38726586E2800176A16 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA23D38526586E2800176A16 /* MainInterface.storyboard */; };
+		DA23D38B26586E2800176A16 /* Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DA23D37F26586E2800176A16 /* Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA23D38926586E2800176A16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA23D35A2658696500176A16 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA23D37E26586E2800176A16;
+			remoteInfo = Extension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DA23D38F26586E2800176A16 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DA23D38B26586E2800176A16 /* Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DA23D3622658696500176A16 /* JavaScriptInjection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JavaScriptInjection.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +54,22 @@
 		DA23D3712658696600176A16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA23D3732658696600176A16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA23D37926586A0900176A16 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DA23D37F26586E2800176A16 /* Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Extension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA23D38126586E2800176A16 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		DA23D38326586E2800176A16 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
+		DA23D38626586E2800176A16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		DA23D38826586E2800176A16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DA23D35F2658696500176A16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA23D37C26586E2800176A16 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,6 +84,7 @@
 			children = (
 				DA23D37926586A0900176A16 /* README.md */,
 				DA23D3642658696500176A16 /* JavaScriptInjection */,
+				DA23D38026586E2800176A16 /* Extension */,
 				DA23D3632658696500176A16 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				DA23D3622658696500176A16 /* JavaScriptInjection.app */,
+				DA23D37F26586E2800176A16 /* Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +112,17 @@
 			path = JavaScriptInjection;
 			sourceTree = "<group>";
 		};
+		DA23D38026586E2800176A16 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DA23D38126586E2800176A16 /* Media.xcassets */,
+				DA23D38326586E2800176A16 /* ActionViewController.swift */,
+				DA23D38526586E2800176A16 /* MainInterface.storyboard */,
+				DA23D38826586E2800176A16 /* Info.plist */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,15 +133,34 @@
 				DA23D35E2658696500176A16 /* Sources */,
 				DA23D35F2658696500176A16 /* Frameworks */,
 				DA23D3602658696500176A16 /* Resources */,
+				DA23D38F26586E2800176A16 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DA23D38A26586E2800176A16 /* PBXTargetDependency */,
 			);
 			name = JavaScriptInjection;
 			productName = JavaScriptInjection;
 			productReference = DA23D3622658696500176A16 /* JavaScriptInjection.app */;
 			productType = "com.apple.product-type.application";
+		};
+		DA23D37E26586E2800176A16 /* Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA23D38C26586E2800176A16 /* Build configuration list for PBXNativeTarget "Extension" */;
+			buildPhases = (
+				DA23D37B26586E2800176A16 /* Sources */,
+				DA23D37C26586E2800176A16 /* Frameworks */,
+				DA23D37D26586E2800176A16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Extension;
+			productName = Extension;
+			productReference = DA23D37F26586E2800176A16 /* Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +172,9 @@
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					DA23D3612658696500176A16 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					DA23D37E26586E2800176A16 = {
 						CreatedOnToolsVersion = 12.5;
 					};
 				};
@@ -118,6 +193,7 @@
 			projectRoot = "";
 			targets = (
 				DA23D3612658696500176A16 /* JavaScriptInjection */,
+				DA23D37E26586E2800176A16 /* Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -134,6 +210,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DA23D37D26586E2800176A16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA23D38226586E2800176A16 /* Media.xcassets in Resources */,
+				DA23D38726586E2800176A16 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -147,7 +232,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DA23D37B26586E2800176A16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA23D38426586E2800176A16 /* ActionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA23D38A26586E2800176A16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA23D37E26586E2800176A16 /* Extension */;
+			targetProxy = DA23D38926586E2800176A16 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DA23D36B2658696500176A16 /* Main.storyboard */ = {
@@ -164,6 +265,14 @@
 				DA23D3712658696600176A16 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DA23D38526586E2800176A16 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA23D38626586E2800176A16 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -288,6 +397,7 @@
 		DA23D3772658696600176A16 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -307,6 +417,7 @@
 		DA23D3782658696600176A16 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -318,6 +429,44 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.plrichardson.JavaScriptInjection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DA23D38D26586E2800176A16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UC6H82UP9B;
+				INFOPLIST_FILE = Extension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.plrichardson.JavaScriptInjection.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DA23D38E26586E2800176A16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UC6H82UP9B;
+				INFOPLIST_FILE = Extension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.plrichardson.JavaScriptInjection.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -340,6 +489,15 @@
 			buildConfigurations = (
 				DA23D3772658696600176A16 /* Debug */,
 				DA23D3782658696600176A16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA23D38C26586E2800176A16 /* Build configuration list for PBXNativeTarget "Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA23D38D26586E2800176A16 /* Debug */,
+				DA23D38E26586E2800176A16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
