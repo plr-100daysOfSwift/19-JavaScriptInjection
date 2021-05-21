@@ -14,7 +14,9 @@ class ActionViewController: UIViewController {
         super.viewDidLoad()
 			if let inputItem = extensionContext?.inputItems.first as? NSExtensionItem {
 				if let itemProvider = inputItem.attachments?.first {
-					//
+					itemProvider.loadItem(forTypeIdentifier: kUTTypePropertyList as String) { <#NSSecureCoding?#>, <#Error?#> in
+						<#code#>
+					}
 				}
 			}
 
