@@ -12,6 +12,9 @@ class ActionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+			if let inputItem = extensionContext?.inputItems.first as? NSExtensionItem {
+				//
+			}
 
 		}
 
