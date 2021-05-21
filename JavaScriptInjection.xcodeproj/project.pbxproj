@@ -18,6 +18,7 @@
 		DA23D38426586E2800176A16 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA23D38326586E2800176A16 /* ActionViewController.swift */; };
 		DA23D38726586E2800176A16 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA23D38526586E2800176A16 /* MainInterface.storyboard */; };
 		DA23D38B26586E2800176A16 /* Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DA23D37F26586E2800176A16 /* Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DA23D3912658769200176A16 /* Action.js in Resources */ = {isa = PBXBuildFile; fileRef = DA23D3902658769200176A16 /* Action.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		DA23D38326586E2800176A16 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		DA23D38626586E2800176A16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		DA23D38826586E2800176A16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA23D3902658769200176A16 /* Action.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Action.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				DA23D38326586E2800176A16 /* ActionViewController.swift */,
 				DA23D38526586E2800176A16 /* MainInterface.storyboard */,
 				DA23D38826586E2800176A16 /* Info.plist */,
+				DA23D3902658769200176A16 /* Action.js */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA23D3912658769200176A16 /* Action.js in Resources */,
 				DA23D38226586E2800176A16 /* Media.xcassets in Resources */,
 				DA23D38726586E2800176A16 /* MainInterface.storyboard in Resources */,
 			);
