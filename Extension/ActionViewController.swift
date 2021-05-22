@@ -17,9 +17,20 @@ class ActionViewController: UIViewController {
 					itemProvider.loadItem(forTypeIdentifier: kUTTypePropertyList as String) { [weak self] (dict, error) in
 						// do stuff
 					}
+	@IBOutlet weak var imageView: UIImageView!
+	
 				}
 			}
 
 		}
+
+	}
+
+	@IBAction func done() {
+		// Return any edited content to the host app.
+		// This template doesn't do anything, so we just echo the passed in items.
+		self.extensionContext!.completeRequest(returningItems: self.extensionContext!.inputItems, completionHandler: nil)
+	}
+
 
 }
