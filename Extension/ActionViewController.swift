@@ -69,4 +69,17 @@ class ActionViewController: UIViewController {
 		script.scrollRangeToVisible(selectedRange)
 	}
 
+	@objc func choosePreset() {
+		let presets = ["alert(document.title);",
+									 "alert(document.URL);"]
+		let ac = UIAlertController(title: "Choose a Preset", message: nil, preferredStyle: .alert)
+		for preset in presets {
+			ac.addAction(UIAlertAction(title: preset, style: .default, handler: { action in
+				self.script.text = preset
+			}))
+		}
+		ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+		present(ac, animated: true)
+	}
+
 }
