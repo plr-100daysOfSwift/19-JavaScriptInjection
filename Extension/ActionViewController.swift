@@ -43,6 +43,8 @@ class ActionViewController: UIViewController {
 
 	@IBAction func done() {
 
+		save()
+
 		let item = NSExtensionItem()
 		let argument: NSDictionary = ["customJavaScript": script.text ?? ""]
 		let webDictionary: NSDictionary = [NSExtensionJavaScriptFinalizeArgumentKey: argument]
@@ -81,6 +83,16 @@ class ActionViewController: UIViewController {
 		}
 		ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
 		present(ac, animated: true)
+	}
+
+	func save() {
+		guard !script.text.isEmpty else { return }
+
+		let defaults = UserDefaults.standard
+		let url = URL(string: pageURL)
+		if let host = url?.host {
+			defaults.set(script.text, forKey: host)
+		}
 	}
 
 }
