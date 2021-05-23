@@ -34,6 +34,10 @@ class ActionViewController: UIViewController {
 			}
 		}
 
+		let notificationCenter = NotificationCenter()
+		notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
+		notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+
 	}
 
 	@IBAction func done() {
@@ -45,6 +49,10 @@ class ActionViewController: UIViewController {
 		item.attachments = [customJavaScript]
 		extensionContext?.completeRequest(returningItems: [item])
 
+	}
+
+	@objc func adjustForKeyboard(notification: Notification) {
+		//
 	}
 
 }
