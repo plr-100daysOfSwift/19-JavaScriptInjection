@@ -10,7 +10,7 @@ import MobileCoreServices
 
 class ActionViewController: UIViewController {
 
-	@IBOutlet weak var imageView: UIImageView!
+	@IBOutlet var script: UITextView!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -31,6 +31,5 @@ class ActionViewController: UIViewController {
 		// This template doesn't do anything, so we just echo the passed in items.
 		self.extensionContext!.completeRequest(returningItems: self.extensionContext!.inputItems, completionHandler: nil)
 	}
-
 
 }
