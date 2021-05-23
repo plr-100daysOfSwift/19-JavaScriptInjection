@@ -33,7 +33,7 @@ class ActionViewController: UIViewController {
 				}
 			}
 		}
-		
+
 		let notificationCenter = NotificationCenter.default
 		notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
 		notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
@@ -60,7 +60,7 @@ class ActionViewController: UIViewController {
 		if notification.name == UIResponder.keyboardWillHideNotification {
 			script.contentInset = .zero
 		} else {
-			script.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height, right: 0)
+			script.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height - view.safeAreaInsets.bottom, right: 0)
 		}
 
 		script.scrollIndicatorInsets = script.contentInset
