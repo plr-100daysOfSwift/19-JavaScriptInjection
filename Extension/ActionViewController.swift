@@ -30,6 +30,7 @@ class ActionViewController: UIViewController {
 					self?.pageURL = javaScriptValues["URL"] as? String ?? ""
 					DispatchQueue.main.async {
 						self?.title = self?.pageTitle
+						self?.loadScript()
 					}
 				}
 			}
@@ -92,6 +93,17 @@ class ActionViewController: UIViewController {
 		let url = URL(string: pageURL)
 		if let host = url?.host {
 			defaults.set(script.text, forKey: host)
+		}
+	}
+
+	func loadScript() {
+		guard !pageURL.isEmpty else { return }
+
+		let defaults = UserDefaults.standard
+		let url = URL(string: pageURL)
+		if let host = url?.host,
+			 let savedScript = defaults.string(forKey: host) {
+			script.text = savedScript
 		}
 	}
 
