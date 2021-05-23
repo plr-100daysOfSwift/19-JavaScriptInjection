@@ -18,7 +18,8 @@ class ActionViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
+		navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
+		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Scripts", style: .plain, target: self, action: #selector(loadScripts))
 
 		if let inputItem = extensionContext?.inputItems.first as? NSExtensionItem {
 			if let itemProvider = inputItem.attachments?.first {
@@ -67,6 +68,11 @@ class ActionViewController: UIViewController {
 
 		let selectedRange = script.selectedRange
 		script.scrollRangeToVisible(selectedRange)
+	}
+
+	@objc func loadScripts() {
+		let vc = ScriptsTableViewController()
+		navigationController?.pushViewController(vc, animated: true)
 	}
 
 }
