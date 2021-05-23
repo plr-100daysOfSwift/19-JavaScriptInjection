@@ -18,7 +18,8 @@ class ActionViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
+		navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
+		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Presets", style: .plain, target: self, action: #selector(choosePreset))
 
 		if let inputItem = extensionContext?.inputItems.first as? NSExtensionItem {
 			if let itemProvider = inputItem.attachments?.first {
