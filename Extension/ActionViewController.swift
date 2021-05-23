@@ -52,7 +52,7 @@ class ActionViewController: UIViewController {
 	}
 
 	@objc func adjustForKeyboard(notification: Notification) {
-		//
+		guard let keyboardValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
 	}
 
 }
