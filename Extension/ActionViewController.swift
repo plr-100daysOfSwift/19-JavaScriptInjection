@@ -55,7 +55,7 @@ class ActionViewController: UIViewController {
 		guard let keyboardValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
 
 		let keyboardScreenEndFrame = keyboardValue.cgRectValue
-		
+		let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
 	}
 
 }
