@@ -17,6 +17,9 @@ class ActionViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+
+		navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
+
 		if let inputItem = extensionContext?.inputItems.first as? NSExtensionItem {
 			if let itemProvider = inputItem.attachments?.first {
 				itemProvider.loadItem(forTypeIdentifier: kUTTypePropertyList as String) { [weak self] (dict, error) in
