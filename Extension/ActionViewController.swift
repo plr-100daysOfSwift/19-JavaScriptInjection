@@ -14,7 +14,14 @@ class ActionViewController: UIViewController {
 
 	var pageTitle = ""
 	var pageURL = ""
-	
+
+	var host: String {
+		let url = URL(string: pageURL)
+		return url?.host ?? ""
+	}
+
+	let defaults = UserDefaults.standard
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
@@ -88,21 +95,14 @@ class ActionViewController: UIViewController {
 
 	func save() {
 		guard !script.text.isEmpty else { return }
-
-		let defaults = UserDefaults.standard
-		let url = URL(string: pageURL)
-		if let host = url?.host {
-			defaults.set(script.text, forKey: host)
-		}
+		guard !host.isEmpty else { return }
+		defaults.set(script.text, forKey: host)
 	}
 
 	func loadScript() {
-		guard !pageURL.isEmpty else { return }
+		guard !host.isEmpty else { return }
 
-		let defaults = UserDefaults.standard
-		let url = URL(string: pageURL)
-		if let host = url?.host,
-			 let savedScript = defaults.string(forKey: host) {
+		if let savedScript = defaults.string(forKey: host) {
 			script.text = savedScript
 		}
 	}
