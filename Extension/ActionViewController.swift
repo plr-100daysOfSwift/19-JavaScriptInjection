@@ -71,7 +71,8 @@ class ActionViewController: UIViewController {
 	}
 
 	@objc func loadScripts() {
-		let vc = ScriptsTableViewController()
+		let storyboard = UIStoryboard(name: "MainInterface", bundle: nil)
+		let vc = storyboard.instantiateViewController(identifier: "ScriptTableViewController")
 		navigationController?.pushViewController(vc, animated: true)
 	}
 
