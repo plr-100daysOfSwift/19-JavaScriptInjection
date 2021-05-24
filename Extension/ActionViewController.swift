@@ -10,12 +10,12 @@ import MobileCoreServices
 
 class ActionViewController: UITableViewController {
 
-	struct script {
+	struct Script: Codable {
 		var name: String
 		var text: String
 	}
 
-	var scripts = [script]()
+	var scripts = [Script]()
 
 	var pageTitle = ""
 	var pageURL = ""
@@ -25,8 +25,18 @@ class ActionViewController: UITableViewController {
 
 		title = "Scripts"
 
-		scripts.append(script(name: "url", text: "alert(document.URL);"))
-		scripts.append(script(name: "title", text: "alert(document.title);"))
+		let defaults = UserDefaults.standard
+		if let encodedScripts = defaults.value(forKey: "scripts") as? Data {
+			let decoder = JSONDecoder()
+			do {
+				try scripts =  decoder.decode([Script].self, from: encodedScripts)
+			} catch {
+				print("Error decoding user defaults")
+			}
+		} else {
+			scripts.append(Script(name: "URL", text: "alert(document.URL);"))
+			scripts.append(Script(name: "Title", text: "alert(document.title);"))
+		}
 
 		navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addScript))
 
