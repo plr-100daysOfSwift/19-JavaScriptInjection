@@ -13,14 +13,31 @@ class DetailViewController: UIViewController {
 	@IBOutlet var scriptTextView: UITextView!
 
 	var name: String?
-	var script: String?
+	var text: String?
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
 		nameTextField.text = name ?? "Unknown"
-		scriptTextView.text = script ?? ""
+		scriptTextView.text = text ?? ""
 
+		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(save))
+
+	}
+
+	@objc func save() {
+		guard let text = scriptTextView.text else { return }
+		guard let name = nameTextField.text else { return }
+
+		let script = Script(name: name, text: text)
+		scripts.append(script)
+
+		let defaults = UserDefaults.standard
+
+		let encoder = JSONEncoder()
+		if let encodedScripts = try? encoder.encode(scripts) {
+			defaults.set(encodedScripts, forKey: "scripts")
+		}
 	}
 
 }
