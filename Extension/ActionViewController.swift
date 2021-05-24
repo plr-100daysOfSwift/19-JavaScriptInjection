@@ -10,13 +10,6 @@ import MobileCoreServices
 
 class ActionViewController: UITableViewController {
 
-	struct Script: Codable {
-		var name: String
-		var text: String
-	}
-
-	var scripts = [Script]()
-
 	var pageTitle = ""
 	var pageURL = ""
 
@@ -80,6 +73,6 @@ class ActionViewController: UITableViewController {
 		let storyboard = UIStoryboard(name: "MainInterface", bundle: nil)
 		let vc = storyboard.instantiateViewController(identifier: "DetailViewController")
 		navigationController?.pushViewController(vc, animated: true)
-
 	}
+
 }
