@@ -41,6 +41,11 @@ class ScriptsTableViewController: UITableViewController {
 		return cell
 	}
 
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let script = scripts[indexPath.row].text
+		// TODO: Pass the data back to the ActionViewController
+	}
+
 	@objc func addScript() {
 
 	}
