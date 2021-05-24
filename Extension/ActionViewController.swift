@@ -77,6 +77,9 @@ class ActionViewController: UITableViewController {
 	}
 
 	@objc func addScript() {
+		let storyboard = UIStoryboard(name: "MainInterface", bundle: nil)
+		let vc = storyboard.instantiateViewController(identifier: "DetailViewController")
+		navigationController?.pushViewController(vc, animated: true)
 
 	}
 }
