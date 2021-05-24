@@ -16,11 +16,10 @@ class ScriptsTableViewController: UITableViewController {
 
 	var scripts = [script]()
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
+	override func viewDidLoad() {
+		super.viewDidLoad()
 
-    // MARK: - Table view data source
+		title = "Scripts"
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
