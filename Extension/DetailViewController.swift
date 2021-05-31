@@ -26,6 +26,7 @@ class DetailViewController: UIViewController {
 	}
 
 	@objc func save() {
+		// TODO:  Disable button if not both fields are populated
 		guard let text = scriptTextView.text else { return }
 		guard let name = nameTextField.text else { return }
 
